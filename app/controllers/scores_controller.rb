@@ -18,7 +18,7 @@ class ScoresController < ApplicationController
     @score = Score.new(score_params)
 
     if @score.save
-      redirect_to root_path
+      redirect_to @score
     else
       render :new
     end
@@ -34,7 +34,7 @@ class ScoresController < ApplicationController
     @score = Score.find(params[:id])
 
     if @score.update(score_params)
-      redirect_to root_path
+      redirect_to @score
     else
       render :edit
     end
