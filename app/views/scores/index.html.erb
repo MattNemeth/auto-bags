@@ -1,0 +1,21 @@
+<h1>Game Scores</h1>
+
+<ul>
+  <% @scores.each do |score| %>
+
+    <li>
+      <h4>Round Number: <%= link_to score.round_number, score %></h4>
+
+      <h5>&emsp;&emsp;Team One Score: 
+      <%= score.team_one %>
+      </h5>
+
+      <h5>&emsp;&emsp;Team Two Score: 
+      <%= score.team_two %>
+      </h5>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a Score??", new_score_path %>
+<%= link_to "Restart Game", destroy_score_path %>

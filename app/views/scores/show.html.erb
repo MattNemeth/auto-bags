@@ -1,0 +1,11 @@
+<h1>Game Number: <%= @score.game_number %></h1>
+<p>Round Number: <%= @score.round_number %></p>
+<p>Team One Score: <%= @score.team_one %></p>
+<p>Team Two Score: <%= @score.team_two %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_score_path(@score) %></li>
+  <li><%= link_to "Destroy", score_path(@score),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %></li>
+<ul>

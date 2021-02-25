@@ -1,0 +1,37 @@
+<h1>Enter a Score</h1>
+
+<%= form_with model: score do |form| %>
+  <div>
+    <%= form.label :team_one %><br>
+    <%= form.text_field :team_one %>
+    <% score.errors.full_messages_for(:team_one).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :team_two %><br>
+    <%= form.text_field :team_two %>
+    <% score.errors.full_messages_for(:team_two).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :round_number %><br>
+    <%= form.text_field :round_number %>
+    <% score.errors.full_messages_for(:round_number).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
